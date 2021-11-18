@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+BEGIN:VCARD
+VERSION:2.1
+N:${1:Nachname};${2:Vorname};;;
+FN:${3:Voller Name}
+TEL;CELL:${4:Telefonnummer}
+END:VCARD
+${5:Next}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>vcard</tabTrigger> -->
+</snippet>

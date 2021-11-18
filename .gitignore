@@ -1,0 +1,6 @@
+*.sublime-keymap
+*.sublime-commands
+*.sublime-settings
+*.status
+!reg_replace.sublime-settings
+!reg_replace_rules.sublime-settings

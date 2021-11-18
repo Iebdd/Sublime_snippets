@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+\newpage
+\section{${1}\textit{${2}\textunderscore ${3}}}
+\subsection{Part 1}
+\hyperlink{toc}{\textuparrow} \\\
+
+
+
+${4:Part}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>Section</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>text.tex.latex</scope>
+</snippet>

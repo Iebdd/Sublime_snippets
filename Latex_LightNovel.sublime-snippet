@@ -1,0 +1,48 @@
+<snippet>
+	<content><![CDATA[
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+%\usepackage{luatexja-fontspec}
+\usepackage{fdsymbol}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false, pdftitle=A Certain Magical Index: New Testament Volume 1, pdfpagemode=FullScreen, bookmarksdepth=2,}
+\setcounter{secnumdepth}{0}
+\newcolumntype{?}{!{\vrule width 1pt}}
+\renewcommand\theadalign{tl}
+\setstretch{1.30}
+\setlength{\parindent}{0pt}
+
+\geometry{top=12mm, left=1cm, right=2cm}
+
+\begin{document}
+\includepdf{Art/Cover.jpg}
+\includepdf{Art/001.jpg}
+\includepdf{Art/002.jpg}
+\includepdf[landscape=true]{Art/003L.jpg}
+\includepdf[landscape=true]{Art/006L.jpg}
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+\tableofcontents
+\newpage
+
+\section*{}
+\hyperlink{toc}{\textuparrow} \\\
+
+\newpage
+\section{\textit{}}
+\subsection{Part 1}
+\hyperlink{toc}{\textuparrow} \\\
+
+\end{document}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>LN</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>text.tex.latex</scope>
+</snippet>

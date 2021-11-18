@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+BEGIN:VCARD
+VERSION:2.1
+N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:${1:Nachname};${2:Vorname};;; 
+FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:Voller Name
+TEL;CELL:${3:Telefonnummer}
+END:VCARD
+${4:Next}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>qp</tabTrigger> -->
+</snippet>

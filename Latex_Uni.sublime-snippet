@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{booktabs}
+\newcolumntype{?}{!{\vrule width 1pt}}
+\renewcommand\theadalign{tl}
+\setstretch{1.10}
+\setlength{\parindent}{0pt}
+
+\geometry{top=12mm, left=1cm, right=2cm}
+\title{${1:21S 520.230 Deutsch: Mutter-/Bildungssprache: Textanalyse und Textproduktion Gruppe 3}}
+\author{Andreas Hofer}
+
+\begin{document}
+	\maketitle
+	
+\end{document}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>latex</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>text.tex.latex</scope> -->
+<description> Latex Uni Template </description>
+</snippet>
