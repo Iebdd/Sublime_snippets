@@ -2,5 +2,7 @@
 *.sublime-commands
 *.sublime-settings
 *.status
+*.user-ca-bundle
+.DS_Store
 !reg_replace.sublime-settings
 !reg_replace_rules.sublime-settings
