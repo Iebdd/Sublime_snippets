@@ -9,6 +9,7 @@
 \usepackage{setspace}
 \usepackage{changepage}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \newcolumntype{?}{!{\vrule width 1pt}}
 \renewcommand\theadalign{tl}
 \setstretch{1.10}
