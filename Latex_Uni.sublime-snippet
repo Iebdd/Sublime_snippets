@@ -10,18 +10,19 @@
 \usepackage{changepage}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{float}
 \newcolumntype{?}{!{\vrule width 1pt}}
 \renewcommand\theadalign{tl}
 \setstretch{1.10}
 \setlength{\parindent}{0pt}
 
 \geometry{top=12mm, left=1cm, right=2cm}
-\title{${1:21S 520.230 Deutsch: Mutter-/Bildungssprache: Textanalyse und Textproduktion Gruppe 3}}
+\title{\vspace{-3cm}${1:21S 520.230 Deutsch: Mutter-/Bildungssprache: Textanalyse und Textproduktion Gruppe 3}}
 \author{Andreas Hofer}
 
 \begin{document}
 	\maketitle
-	
+	${2}
 \end{document}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

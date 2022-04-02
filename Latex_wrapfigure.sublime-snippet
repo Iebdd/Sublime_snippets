@@ -1,13 +1,10 @@
 <snippet>
-	<content><![CDATA[
-\subsection{Between the Lines ${1}}
-\hyperlink{toc}{\textuparrow} \\\
-
-
-
-${2:Section}]]></content>
+	<content><![CDATA[\begin{wrapfigure}{l}{0.5\textwidth}
+\includegraphics{${1:Image.jpg}}
+\caption{${2:Caption}}
+\end{wrapfigure}]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-<tabTrigger>lines</tabTrigger> -->
+<tabTrigger>wrapfig</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 <scope>text.tex.latex</scope> -->
 </snippet>

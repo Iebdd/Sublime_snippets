@@ -12,21 +12,22 @@
 %\usepackage{luatexja-fontspec}
 \usepackage{fdsymbol}
 \usepackage{hyperref}
-\hypersetup{colorlinks=false, pdftitle=A Certain Magical Index: New Testament Volume 1, pdfpagemode=FullScreen, bookmarksdepth=2,}
+\hypersetup{colorlinks=false, pdftitle=[[]], pdfpagemode=FullScreen, bookmarksdepth=2,}
 \setcounter{secnumdepth}{0}
 \newcolumntype{?}{!{\vrule width 1pt}}
 \renewcommand\theadalign{tl}
 \setstretch{1.30}
 \setlength{\parindent}{0pt}
 
-\geometry{top=12mm, left=1cm, right=2cm}
+\geometry{top=12mm}
 
 \begin{document}
-\includepdf{Art/Cover.jpg}
-\includepdf{Art/001.jpg}
-\includepdf{Art/002.jpg}
-\includepdf[landscape=true]{Art/003L.jpg}
-\includepdf[landscape=true]{Art/006L.jpg}
+\includepdf{images/cover.jpeg}
+\includepdf[landscape=false]{images/kuchie-001.jpg}
+\includepdf[landscape=false]{images/kuchie-002.jpg}
+\includepdf[landscape=false]{images/kuchie-003.jpg}
+\includepdf[landscape=false]{images/kuchie-004.jpg}
+\includepdf[landscape=false]{images/kuchie-005.jpg}
 \addtocontents{toc}{\protect\hypertarget{toc}{}}
 \tableofcontents
 \newpage
@@ -35,9 +36,6 @@
 \hyperlink{toc}{\textuparrow} \\\
 
 \newpage
-\section{\textit{}}
-\subsection{Part 1}
-\hyperlink{toc}{\textuparrow} \\\
 
 \end{document}
 ]]></content>

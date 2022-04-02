@@ -4,7 +4,7 @@
 	{
 		"remove_dot":
 		{
-			"find": "[.] ?\n",
+			"find": "[.] ?\\n",
 			"replace": ". \\\\\\\\"
 		},
 		"remove_parent":
@@ -14,7 +14,7 @@
 		},
 		"replace_dots":
 		{
-			"find": "[…] ?\n",
+			"find": "[…] ?\\n",
 			"replace": "… \\\\\\\\"
 		},
 		"remove_curlyquotes":
@@ -70,7 +70,7 @@
 		"remove_dollar":
 		{
 			"find": "[^\\\\][$]",
-			"replace": "\\$"
+			"replace": " \\$"
 		},
 		"remove_percent":
 		{
@@ -107,139 +107,100 @@
 			"find": "(?<=>>.*)\\n",
 			"replace": " \\\\\\\\ \\\\\\\\\\n"
 		},
-		"replace_image1":
+		"HTML_Replace_paragraph1":
 		{
-			"find": ".*(INDEX|Index).*(?=[0-9]{3}[^-]\\.[jpgn])",
-			"replace": "\\n\\n%\\\\includepdf{Art/"
+			"find": "<p>",
+			"replace": ""
 		},
-		"replace_image11":
+		"HTML_Replace_paragraph2":
 		{
-			"find": ".*(INDEX|Index).*(?=[0-9]{3}-[0-9]{3}\\.[jpgn])",
-			"replace": "\\n\\n%\\\\includepdf[landscape=true]{Art/"
+			"find": "</p>\\n",
+			"replace": " \\\\\\\\"
 		},
-		"replace_image2png":
+		"HTML_Replace_break":
 		{
-			"find": "-[\\d]{3}[.]png[^}]",
-			"replace": "L.png}"
+			"find": "<br/>",
+			"replace": " \\\\\\\\ \\n"
 		},
-		"replace_image22png":
+		"HTML_Replace_list_item1":
 		{
-			"find": "(?<!-[\\d]{3})[.]png[^}]",
-			"replace": ".png}"
+			"find": "<li.*?>",
+			"replace": "\\\\item{"
 		},
-		"replace_image2jpg":
+		"HTML_Replace_list_item2":
 		{
-			"find": "-[\\d]{3}[.]jpg[^}]",
-			"replace": "L.jpg}"
-		},
-		"replace_image22jpg":
-		{
-			"find": "(?<!-[\\d]{3})[.]jpg[^}]",
-			"replace": ".jpg}"
-		},
-		"replace_star":
-		{
-			"find": "[☆]",
-			"replace": "\\\\medwhitestar "
-		},
-		"replace_circle":
-		{
-			"find": "[●]",
-			"replace": "\\\\tikzcircle{3pt} "
-		},
-		"truncate_end":
-		{
-			"find": "\\n(Translator[\\S\\s]*|Prev[\\S\\s]*)",
-			"replace": " \\n\\n\\\\end{document}"
-		},
-		"truncate_front":
-		{
-			"find": "baka[\\s\\S]*Prologue:[\\s\\S]*?(?=Prologue:)",
-			"replace": "F"
-		},
-		"widen_title":
-		{
-			"find": "\\n(?=.*\\[edit\\])",
-			"replace": "\\n\\n"
-		},
-		"section_format1":
-		{
-			"find": "\\n(?=Chapter)",
-			"replace": "\\n\\n\\\\newpage\\n\\section{"
-		},
-		"section_format2":
-		{
-			"find": "(?<=[.?!—–]) (?=\\S*\\[edit\\])",
-			"replace": " \\\\textit{"
-		},
-		"section_format3":
-		{
-			"find": "(?<![0-9]{1,2}|^.)\\[edit\\]",
-			"replace": "}}"
-		},
-		"prologue_format1":
-		{
-			"find": ".(?=Prologue:)",
-			"replace": "\\section{"
-		},
-		"prologue_format2":
-		{
-			"find": "(?<=Prologue:.*\\[edit\\])\\n",
-			"replace": "\\n\\hyperlink{toc}{\\\\textuparrow} \\\\\\\\ \\n"
-		},
-		"part_format2":
-		{
-			"find": "\\n(?=.*\\[edit\\])",
-			"replace": "\\n\\n\\subsection{"
-		},
-		"part_format1":
-		{	
-			"find": "(?<=\\n.*)\\[edit\\]",
+			"find": "</li>",
 			"replace": "}"
 		},
-		"question_change":
+		"HTML_Replace_itemize1":
 		{
-			"find": "\\\\subsection\\{\\?\\}",
-			"replace": "\\\\section{?}"
+			"find": "<ul>",
+			"replace": "\\\\begin{itemize} \\n"
 		},
-		"hyperlink_format":
+		"HTML_Replace_itemize2":
 		{
-			"find": "(?<=\\n.*\\[edit\\])\\n",
-			"replace": "\\n\\hyperlink{toc}{\\\\textuparrow} \\\\\\\\ \\n"
+			"find": "</ul>",
+			"replace": "\\\\end{itemize} \\n"
 		},
-		"epilogue_format1":
+		"HTML_Remove_span":
 		{
-			"find": "\\n(?=Epilogue:)",
-			"replace": "\\n\\n\\\\newpage\\n\\section{"
+			"find": "</?span>",
+			"replace": ""
 		},
-		"epilogue_format2":
+		"HTML_Replace_image1":
 		{
-			"find": "(?<=Epilogue.*textit.*[}]{1,2})\\n",
-			"replace": "\\n\\hyperlink{toc}{\\\\textuparrow} \\\\\\\\ \\n"
+			"find": "<img.*?/Images/",
+			"replace": "\\\\includepdf[landscape=false]{OEBPS/images/"
 		},
-		"afterword_format1":
+		"HTML_Replace_image2":
 		{
-			"find": "\\n(?=Afterword)",
-			"replace": "\\n\\n\\\\newpage\\n\\section{"
-		},
-		"afterword_format2":
-		{
-			"find": "(?<=Afterword.*)[}]{2}\\n",
-			"replace": "}\\n\\hyperlink{toc}{\\\\textuparrow} \\\\\\\\ \\n"
-		},
-		"textit_check":
-		{	"find": "(?<!textit.*)[}]{2}",
+			"find": "(?<=p[0-9]{3}.jpg)\"/>",
 			"replace": "}"
 		},
-		"reduce_lines1":
+		"HTML_Replace_chapters1":
 		{
-			"find": "(?<=[}]{1})\\n{2,10}(?=.*{)",
-			"replace": "\\n"
+			"find": "<h1>",
+			"replace": "\\\\section{"
 		},
-		"reduce_lines2":
+		"HTML_Replace_chapters2":
 		{
-			"find": "(?<=[^}] )\\\\\\\\\\n{2,10}(?=[a-zA-Z>])",
-			"replace": "\\\\\\\\\\n"
+			"find": "</h1>",
+			"replace": "}\\n \\\\hyperlink{toc}{\\\\textuparrow} \\\\\\\\ \\n "
+		},
+		"HTML_Replace_space":
+		{
+			"find": "&#160;",
+			"replace": " "
+		},	
+		"HTML_Replace_em1":
+		{
+			"find": "<em>",
+			"replace": "\\\\textit{"
+		},
+		"HTML_Replace_em2":
+		{
+			"find": "</em>",
+			"replace": "}"
+		},
+		"HTML_Replace_link1":
+		{
+			"find": "<a href=\"",
+			"replace": "\\\\href{"
+		},
+		"HTML_Replace_link2":
+		{
+			"find": "(\\\\href{).*?\\K\".*?</a>",
+			"replace": "}"
+		},
+		"HTML_Replace_diamond":
+		{
+			"find": "◇",
+			"replace": "$\\diamond$"
+		},
+		"HTML_Replace_circle":
+		{
+			"find": "◯◯◯",
+			"replace": "$\\bigcirc\\bigcirc\\bigcirc$"
 		},
 		"add_latex":
 		{
@@ -290,6 +251,81 @@
 		{
 			"find": "(?<=\\d)k(?=\")",
 			"replace": "00"
+		},
+		"NYT_get_title1":
+		{
+			"find": "[\\s\\S]*?<title.*?>",
+			"replace": "\\\\documentclass{article}\\n\\\\usepackage{geometry}\\n\\\\usepackage{makecell}\\n\\\\usepackage{array}\\n\\\\usepackage{multicol}\\n\\\\usepackage{setspace}\\n\\\\usepackage{changepage}\\n\\\\usepackage{booktabs}\\n\\\\usepackage{pdfpages}\\n\\\\usepackage{tikz}\\n\\\\usepackage{fdsymbol}\\n\\\\usepackage[colorlinks=false,linkbordercolor=red]{hyperref}\\n\\\\newcolumntype{?}{!{\\\\vrule width 1pt}}\\n\\\\renewcommand\\\\theadalign{tl}\\n\\\\setstretch{1.30}\\n\\\\setlength{\\\\parindent}{0pt}\\n\\n\\\\begin{document}\\n\\\\section*{\\\\centering "
+		},
+		"NYT_get_title2":
+		{
+			"find": "</title>[\\s\\S]*?<p.*?(css-axufdj evys1bk0|css-16f3y1r e13ogyst0)\">",
+			"replace": "} \n"
+		},
+		"NYT_get_content1":
+		{
+			"find": "</p>.*?\n?.*?<p.*?css-axufdj evys1bk0\">",
+			"replace": "\\\\\\\\ \n"
+		},
+		"NYT_get_content2":
+		{
+			"find": "</p>[\\s\\S]*",
+			"replace": "\\\\\\\\ \\n \\end{document}"
+		},
+		"NYT_add_links1":
+		{
+			"find": "<a.*?href=\"",
+			"replace": "\\href{"
+		},
+		"NYT_add_links2":
+		{
+			"find": "\" title=\".*?\".*?>",
+			"replace": "}{"
+		},
+		"NYT_add_links3":
+		{
+			"find": "</a>",
+			"replace": "}"
+		},
+		"NYT_delete_strong1":
+		{
+			"find": "<strong.*?>",
+			"replace": "\\\\textbf{"
+		},
+		"NYT_delete_strong2":
+		{
+			"find": "</strong>",
+			"replace": "}"
+		},
+		"NYT_delete_em1":
+		{
+			"find": "<em.*?>",
+			"replace": "\\\\textit{"
+		},
+		"NYT_delete_em2":
+		{
+			"find": "</em>",
+			"replace": "}"
+		},
+		"NYT_get_image1":
+		{
+			"find": "srcSet=\"",
+			"replace": "\n \\\\begin{figure}[H]\n \\\\centering\n \\\\hyperref{"
+		},
+		"NYT_get_image2":
+		{
+			"find": "(?<=\\\\hyperref{[\\s\\S]*?\")[\\s\\S]*?<imgalt=\"",
+			"replace": "}{\\\\includegraphics[width=\\\\textwidth]{picture}}\n \\\\caption{"
+		},
+		"NYT_get_image3":
+		{
+			"find": "(?<=\\\\caption{[\\s\\S]*?\").",
+			"replace": "</p>"
+		},
+		"Remove_HTML_and":
+		{
+			"find": "&amp",
+			"replace": "\\&"
 		},
 	}	
 }

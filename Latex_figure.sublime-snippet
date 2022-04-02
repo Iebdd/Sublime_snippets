@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[\subsection{${1}}]]></content>
+	<content><![CDATA[
+\begin{figure}[H]
+\centering
+\includegraphics{${1}}
+\caption{Fig. ${2}.}
+\end{figure}
+${3}]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-<tabTrigger>ssec</tabTrigger> -->
+<tabTrigger>figure</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 <scope>text.tex.latex</scope> -->
 </snippet>
