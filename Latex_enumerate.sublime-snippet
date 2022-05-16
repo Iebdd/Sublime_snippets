@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 \begin{enumerate}
-	\item{${1}}
+	\item{${0}}
 \end{enumerate}]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 <tabTrigger>enumerate</tabTrigger>

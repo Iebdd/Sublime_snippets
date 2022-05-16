@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[{\color{${1:Colour}} ${2:Text}}]]></content>
+	<content><![CDATA[{\color{${1:Colour}} ${0:Text}}]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 <tabTrigger>colour</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

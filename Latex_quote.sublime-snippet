@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 \begin{quote}
-${1}
+${0}
 \end{quote}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -2,7 +2,7 @@
 	<content><![CDATA[
 \begin{tabular}{| l | l | l | l | l |}
 	\toprule
-	${1:ITEM} & & & & \\\ \midrule
+	${0:ITEM} & & & & \\\ \midrule
 	
 	\bottomrule
 \end{tabular}]]></content>
