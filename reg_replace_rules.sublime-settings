@@ -189,7 +189,12 @@
 		},
 		"HTML_Replace_link2":
 		{
-			"find": "(\\\\href{).*?\\K\".*?</a>",
+			"find": "(\\\\href{).*?\\K\".*?>",
+			"replace": "}{"
+		},
+		"HTML_Replace_link3":
+		{
+			"find": "(\\\\href{).*?}{.*?\\K</a>",
 			"replace": "}"
 		},
 		"HTML_Replace_diamond":
