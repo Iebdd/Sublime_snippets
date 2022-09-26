@@ -1,0 +1,65 @@
+<snippet>
+	<content><![CDATA[\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{nicefrac}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\newcolumntype{?}{!{\vrule width 1pt}}
+\renewcommand\theadalign{tl}
+\setstretch{1.10}
+\setlength{\parindent}{0pt}
+
+%\geometry{top=12mm, left=1cm, right=2cm}
+\title{\vspace{-3cm}${1:Title}}
+\author{Andreas Hofer}
+
+\begin{document}
+	\section*{\centering ${2:Title}}
+	\vspace{0.5cm}
+	\begin{multicols}{2}
+	\begin{enumerate}
+		\item{${3:}}
+		\item{${4:}}
+		\item{${5:}}
+		\item{${6:}}
+		\item{${7:}}
+		\item{${8:}}
+		\item{${9:}}
+		\item{${10:}}
+		\item{${11:}}
+		\item{${12:}}
+	\end{enumerate}
+	\columnbreak
+		\begin{tabular}{| l  l |}
+		\toprule
+		\multicolumn{2}{| l |}{\textbf{Zutaten ${13:für }:}} \\ \midrule
+		${14:} & ${15:} \\ \hline
+		${16:} & ${17:} \\ \hline
+		${18:} & ${19:} \\ \hline
+		${20:} & ${21:} \\ \hline
+		${22:} & ${23:} \\ \hline
+		${24:} & ${25:} \\ \hline
+		${26:} & ${27:} \\ \hline
+		${28:} & ${29:} \\ \hline
+		${30:} & ${31:} \\ \hline
+		${32:} & ${33:} \\ \hline
+		${34:} & ${35:} \\ \hline
+		${36:} & ${37:} \\ \hline
+		${38:} & ${39:}  \\ \bottomrule
+		\end{tabular}
+	\end{multicols}
+	
+\end{document}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>rezept2</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>text.tex.latex</scope> -->
+</snippet>

@@ -332,5 +332,10 @@
 			"find": "&amp",
 			"replace": "\\&"
 		},
+		"Decapitalise":
+		{
+			"find": "(?<=[A-ZÜÖÄ])([A-ZÜÖÄ])(?=[a-züöäß])",
+			"replace": "\\L\\1",
+		},
 	}	
 }

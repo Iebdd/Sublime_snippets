@@ -1,0 +1,87 @@
+<snippet>
+	<content><![CDATA[\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{titling}
+\usepackage{multicol}
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{xfrac}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\newcolumntype{?}{!{\vrule width 1pt}}
+\renewcommand\theadalign{tl}
+\setstretch{1.10}
+\setlength{\parindent}{0pt}
+
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+
+\geometry{top=12mm, left=1cm, right=2cm}
+\predate{}
+\postdate{}
+\date{}
+\title{\vspace{-1.5cm}\textbf{${1:Title}}}
+%\author{Andreas Hofer}
+
+\begin{document}
+	\maketitle
+	\section*{Zeiten und Zutaten:}
+	\begin{multicols}{2}
+	\textbf{Knetzeit:} \\
+	${2:Zeit} Minuten langsam, \\
+	${3:Zeit} Minuten intensiver, \\
+	${4:Zeit} Minuten insgesamt. \\ \\
+	\textbf{Teigruhe nach dem Kneten:} \\
+	${5:Zeit} Minuten \\ \\
+	\textbf{Gehzeit vor dem Backen:} \\
+	ca. ${6:Zeit} Minuten \\ \\
+	\textbf{Backzeit:} \\
+	ca. ${7:Zeit} Minuten bei \\
+	${8:Grad} °C Heißluft oder \\
+	${9:Grad} °C Ober-/Unterhitze
+	\vfill
+	\columnbreak
+	\begin{tabular}{| l  l |}
+		\toprule
+		\multicolumn{2}{| l |}{\textbf{Zutaten ${10:für}}} \\ \midrule
+		${11:} & ${12:} \\ \hline
+		${13:} & ${14:} \\ \hline
+		${15:} & ${16:} \\ \hline
+		${17:} & ${18:} \\ \hline
+		${19:} & ${20:} \\ \hline
+		${21:} & ${22:} \\ \hline
+		${23:} & ${24:} \\ \hline
+		${25:} & ${26:} \\ \hline
+		${27:} & ${28:} \\ \hline
+		${29:} & ${30:} \\ \hline
+		${31:} & ${32:} \\ \hline
+		${33:} & ${34:} \\ \hline
+		${35:} & ${36:} \\ \hline
+		${37:} & ${38:} \\ \bottomrule
+	\end{tabular}
+	\end{multicols}
+	\section*{Zubereitung:}
+	\begin{enumerate}
+		\item{${39:}}
+		\item{${40:}}
+		\item{${41:}}
+		\item{${42:}}
+		\item{${43:}}
+		\item{${44:}}
+		\item{${45:}}
+		\item{${46:}}
+	\end{enumerate}
+\end{document}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>rezeptbrot</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>text.tex.latex</scope> -->
+</snippet>
