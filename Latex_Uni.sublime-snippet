@@ -6,13 +6,13 @@
 \usepackage{makecell}
 \usepackage{array}
 \usepackage{multicol}
-\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
 \usepackage{setspace}
 \usepackage{changepage}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{float}
 \newcolumntype{?}{!{\vrule width 1pt}}
+\newcommand{\paragraphlb}[1]{\paragraph{#1}\mbox{}\\}
 \renewcommand\theadalign{tl}
 \setstretch{1.10}
 \setlength{\parindent}{0pt}
