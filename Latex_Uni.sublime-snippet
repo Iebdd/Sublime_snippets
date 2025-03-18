@@ -9,21 +9,70 @@
 \usepackage{setspace}
 \usepackage{changepage}
 \usepackage{booktabs}
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{cprotect}
 \usepackage{float}
 \newcolumntype{?}{!{\vrule width 1pt}}
-\newcommand{\paragraphlb}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\paragraphlb}[1]{\paragraph{#1}\mbox{}\\\\}
+\renewcommand{\contentsname}{Inhaltsverzeichnis:}
 \renewcommand\theadalign{tl}
 \setstretch{1.10}
 \setlength{\parindent}{0pt}
 
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{\hyperlink{sec-\thesection}{#1}
+\addtocontents{toc}{\protect\hypertarget{sec-\thesection}{}}}
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}{}{0pt}{#1}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{\hyperlink{subsec-\thesubsection}{#1}
+\addtocontents{toc}{\protect\hypertarget{subsec-\thesubsection}{}}}
+\titleformat{name=\subsection,numberless}
+  {\normalfont\large\bfseries}{\thesubsection}{0pt}{#1}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
 \geometry{top=12mm, left=1cm, right=2cm}
-\title{\vspace{-3cm}${1:21S 520.230 Deutsch: Mutter-/Bildungssprache: Textanalyse und Textproduktion Gruppe 3}}
+\title{\vspace{-1cm}${1:<Title>}}
 \author{Andreas Hofer}
 
 \begin{document}
 	\maketitle
+	\tableofcontents
 	${2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 \end{document}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
